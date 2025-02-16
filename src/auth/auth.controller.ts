@@ -19,8 +19,8 @@ export class AuthController {
     // @route   POST /auth/login
     // @access  Public
     @Post('login')
-    login() {
-        return this.authService.logIn();
+    login(@Body() dto: AuthDto) {
+        return this.authService.logIn(dto);
     }
 }
 
